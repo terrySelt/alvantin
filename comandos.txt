@@ -1,0 +1,50 @@
+cd --> entrar a un directorio
+uso:
+>cd directorio
+>cd ~
+>cd /
+
+>cd ..  --> retroceder un directorio
+
+mkdir --> crea un directorio
+uso:
+>mkdir carpeta1 carpeta2
+>mkdir "carpeta con espacios"
+>mkdir carpeta && cd carpeta
+
+
+Comandos de git
+
+Iniciamos git
+>git init
+
+Vemos que configuraciones tenemos
+>git config -l
+
+Añadimos algunas configraciones
+>git config --global user.name
+>git config --global user.email
+>git config --global core.editor subl
+>git config --global alias.st status
+
+Enlazamos el github con el git de la maquina remotamente llamando a la rama principal "origin"
+>git remote add origin git@github.com:garyDav/alvantin.git
+
+Ya esta! :) ahora nos traemos todo de ese repositorio
+>git pull origin master
+(puede que te pida tu contraseña SSH-key)
+
+Ahora creamos un archivo de ejemplo y lo subimos al repositorio
+>touch README2.md
+>git add README2.md
+>git commit -m "Mi primer commit"
+>git push origin master
+
+Por ultimo si modificaste varios archivos
+>git add .
+>git commit -m "diseño terminado"
+>git push origin master
+
+
+
+
